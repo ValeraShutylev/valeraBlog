@@ -1,13 +1,15 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
+from django_markdown.models import MarkdownField
+
 
 # Create your models here.
 class Post(models.Model):
     title = models.CharField(max_length=140)
     description = models.CharField(max_length=140)
     image = models.FileField(null=True, blank=True)
-    content = models.TextField()
+    content = MarkdownField()
     slug = models.SlugField()
     published = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)
