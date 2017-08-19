@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'Cambria';
+  src: url('Cambria.woff') format('woff'),
+       url('Cambria.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CambriaMath';
+  src: url('CambriaMath.woff') format('woff'),
+       url('CambriaMath.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+

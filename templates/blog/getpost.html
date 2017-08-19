@@ -1,0 +1,30 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+    <div class="post">
+		<div class="container">
+			<div class="posttitle">
+				<div class="row">
+					<div class="col-md-2">
+					</div>
+					<div class="col-md-5">
+						<div class="goback"><a href="{% url 'index' %}">< Вернуться</a></div>
+						<h2 class="h2-post">{{ post.title }}</h2>
+						<div class="author"><a href="#">{{ post.author }}</a><span> | </span><span>{{ post.created }}</span></div>
+					</div>
+				</div>
+			</div>
+			<div class="postcontent">
+				<div class="row">
+					<div class="col-md-2">
+					</div>
+					<div class="col-md-8">
+						<p class="fullPostText">{{ post.content }}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
